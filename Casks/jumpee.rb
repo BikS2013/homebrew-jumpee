@@ -18,6 +18,7 @@ cask "jumpee" do
   app "Jumpee.app"
 
   postflight do
+    system "xattr", "-d", "com.apple.quarantine", "#{appdir}/Jumpee.app"
     system "osascript", "-e",
       'display notification "Jumpee installed. Grant Accessibility permissions in System Settings > Privacy & Security > Accessibility." with title "Jumpee"'
   end
