@@ -7,7 +7,7 @@ cask "jumpee" do
   desc "macOS menu bar app for naming, jumping between desktops, pinning windows, and input source indicator"
   homepage "https://github.com/BikS2013/Jumpee"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Jumpee.app"
 
