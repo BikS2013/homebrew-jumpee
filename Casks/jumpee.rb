@@ -1,6 +1,6 @@
 cask "jumpee" do
-  version "1.5.1"
-  sha256 "9b8f544a092c840d4d4dc3f11ab1b5e08cbdeb8a7c92417bf45ce7257a5a9d06"
+  version "1.6.0"
+  sha256 "5e0b1076487e47ed502e8742a9a8663ea5a3f469d184c6786444839f59835a3e"
 
   url "https://github.com/BikS2013/Jumpee/releases/download/v#{version}/Jumpee-#{version}.zip"
   name "Jumpee"
@@ -12,7 +12,6 @@ cask "jumpee" do
   app "Jumpee.app"
 
   postflight do
-    system "xattr", "-d", "com.apple.quarantine", "#{appdir}/Jumpee.app"
     system "osascript", "-e",
       'display notification "Jumpee installed. Grant Accessibility permissions in System Settings > Privacy & Security > Accessibility." with title "Jumpee"'
   end
@@ -35,7 +34,7 @@ cask "jumpee" do
       System Settings > General > Login Items > add Jumpee
 
     Global hotkeys (configurable from the Hotkeys section in the menu):
-      Cmd+J       — toggle dropdown menu (open/close)
+      Cmd+J       — toggle dropdown menu (open/close; pops at the cursor by default)
       Cmd+M       — move focused window to another desktop (requires moveWindow.enabled)
       Ctrl+Cmd+P  — pin/unpin focused window on top (requires pinWindow.enabled)
   EOS
