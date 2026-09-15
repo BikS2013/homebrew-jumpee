@@ -1,24 +1,25 @@
 cask "jumpee" do
-  version "1.9.0"
-  sha256 "82e02fe1c1d6c5492518677499f6f09763d6d1b001e6424e0f4d1050350421d8"
+  version "1.9.1"
+  sha256 "f685983e9a8de00abd2be558232a1f1d825c5303bccac8b139dc88590df07c2a"
 
   url "https://github.com/BikS2013/Jumpee/releases/download/v#{version}/Jumpee-#{version}.zip"
   name "Jumpee"
-  desc "macOS menu bar app for naming, jumping between desktops, pinning windows, and input source indicator"
+  desc "Menu bar app for naming, navigating, and managing desktops"
   homepage "https://github.com/BikS2013/Jumpee"
 
   depends_on macos: :ventura
 
   app "Jumpee.app"
 
-  postflight do
-    system "osascript", "-e",
-      'display notification "Jumpee installed. Grant Accessibility permissions in System Settings > Privacy & Security > Accessibility." with title "Jumpee"'
+  postflight_steps do
+    run "/usr/bin/osascript",
+        args: [
+          "-e",
+          'display notification "Grant Accessibility access in System Settings." with title "Jumpee installed"',
+        ]
   end
 
-  zap trash: [
-    "~/.tool-agents/jumpee",
-  ]
+  zap trash: "~/.tool-agents/jumpee"
 
   caveats <<~EOS
     Jumpee requires Accessibility permissions to switch desktops:
@@ -39,4 +40,3 @@ cask "jumpee" do
       Ctrl+Cmd+P  — pin/unpin focused window on top (requires pinWindow.enabled)
   EOS
 end
-
