@@ -1,6 +1,6 @@
 cask "jumpee" do
-  version "1.8.0"
-  sha256 "5ecbf891b4e272fe13ace7b7079a386c2cea9106ac685d2224de127eacfab195"
+  version "1.9.0"
+  sha256 "82e02fe1c1d6c5492518677499f6f09763d6d1b001e6424e0f4d1050350421d8"
 
   url "https://github.com/BikS2013/Jumpee/releases/download/v#{version}/Jumpee-#{version}.zip"
   name "Jumpee"
@@ -34,8 +34,9 @@ cask "jumpee" do
       System Settings > General > Login Items > add Jumpee
 
     Global hotkeys (configurable in Settings > Shortcuts, opened with Cmd+,):
-      Cmd+J       — toggle dropdown menu (open/close; pops at the cursor by default)
+      Cmd+J       — toggle the workspace popover (open/close)
       Cmd+M       — move focused window to another desktop (requires moveWindow.enabled)
       Ctrl+Cmd+P  — pin/unpin focused window on top (requires pinWindow.enabled)
   EOS
 end
+
