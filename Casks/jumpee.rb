@@ -1,6 +1,6 @@
 cask "jumpee" do
-  version "1.6.0"
-  sha256 "5e0b1076487e47ed502e8742a9a8663ea5a3f469d184c6786444839f59835a3e"
+  version "1.7.0"
+  sha256 "5b7eca4f0dc021198a39767aa6d4beb6405f13b08b6f54fd2b022154c1a8b2a9"
 
   url "https://github.com/BikS2013/Jumpee/releases/download/v#{version}/Jumpee-#{version}.zip"
   name "Jumpee"
@@ -17,7 +17,7 @@ cask "jumpee" do
   end
 
   zap trash: [
-    "~/.Jumpee",
+    "~/.tool-agents/jumpee",
   ]
 
   caveats <<~EOS
