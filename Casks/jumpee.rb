@@ -1,6 +1,6 @@
 cask "jumpee" do
-  version "1.7.0"
-  sha256 "5b7eca4f0dc021198a39767aa6d4beb6405f13b08b6f54fd2b022154c1a8b2a9"
+  version "1.7.1"
+  sha256 "8cdc8e02b0f9d9a5549738a405f1be788b9f76d4b5e11bbe79911a0ca4fc45a6"
 
   url "https://github.com/BikS2013/Jumpee/releases/download/v#{version}/Jumpee-#{version}.zip"
   name "Jumpee"
