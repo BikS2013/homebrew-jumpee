@@ -1,6 +1,6 @@
 cask "jumpee" do
-  version "1.9.1"
-  sha256 "f685983e9a8de00abd2be558232a1f1d825c5303bccac8b139dc88590df07c2a"
+  version "1.9.2"
+  sha256 "f49685744525d82c909ebd1744b561c48b774bf5a144af01c9bffd2da4832ace"
 
   url "https://github.com/BikS2013/Jumpee/releases/download/v#{version}/Jumpee-#{version}.zip"
   name "Jumpee"
@@ -25,8 +25,9 @@ cask "jumpee" do
     Jumpee requires Accessibility permissions to switch desktops:
       System Settings > Privacy & Security > Accessibility > enable Jumpee
 
-    Mission Control keyboard shortcuts (Ctrl+1 through Ctrl+9) must be enabled:
+    Mission Control keyboard shortcuts must be enabled:
       System Settings > Keyboard > Keyboard Shortcuts > Mission Control
+      Ctrl+1 through Ctrl+9 (desktop switching), Ctrl+Left/Right (Move Window)
 
     Pin Window on Top requires Screen Recording permission:
       System Settings > Privacy & Security > Screen Recording > enable Jumpee
